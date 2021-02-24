@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página Modelo</title>
+    <script>
+        //Ativa verificações adicionais de variáveis
+        // Modo "chato" do JavaScript
+        'use strict'
+
+        // parseInt() tenta converter um texto em nnúmero, se possível
+        // Caso o texto não contenha um numero válido, o resultado será 
+        // NaN (Not a Number)
+
+
+        let numero = parseInt ( prompt ('Informe um número inteiro MENOR que 1000: '))
+
+        if (isNaN(numero)){ //O resultado da conversão foi NaN?
+            alert ('Apenas números, tente novamente!')
+
+        }
+
+        if(numero<1000){
+            alert ('Parabéns, você acertou!')
+        }
+
+        else if(numero===1000){
+            alert ('O número deve ser menor que 1000, tente outra vez!')
+        }
+        
+        else {
+            alert('Infelizmente, você não acertou!')
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

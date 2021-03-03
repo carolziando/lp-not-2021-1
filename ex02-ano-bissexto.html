@@ -11,7 +11,7 @@
         // programação
         'use strict'
         
-        /*
+        /* esse barra asteriscos desabilita sua condição, tem que fechar
             Peça ao usuário para informar um ano e determine
             se é bissexto pela regra:
 
@@ -36,17 +36,24 @@
        
         }
 
-        if(ano < 1582){
+        if(isNaN(ano) || ano < 1582){
             alert ('O ano deve ser posterior ao ano de 1582, tente novamente!')
     
         }
-        if(ano%400==0 || ano%4==0 && ano%100!=0){
-            alert ('Ano bissexto!')
+        if(ano%400===0 || (ano%4===0 && (ano%100!=0))){
+            alert ('O ano ' + ano +  ' é bissexto!')
         }
 
                        
         else {
-            alert('Ano não bissexto!')
+            //alert('O ano ' + ano + ' não é bissexto!')
+            //Mensagem usando string template com interpolação de variável
+            alert(`O ano ${ano} não é bissexto!`) 
+
+            // Outro exemplo de interpolação de variáveis em string template
+            //let a = 5, b = 4, c = 2
+            //alert('O valor de ' + a + ' somado com ' + b + ' somado com ' + c + ' é igual a ' + (a + b + c))
+            //alert(`O valor de ${a} somado com ${b} somado com ${c} é igual a ${a + b + c}`)
         }
 
     </script>

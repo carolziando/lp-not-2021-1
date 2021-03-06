@@ -24,14 +24,41 @@
             e informe o resultado usando document.write().
         */
         let n1 = parseFloat ( prompt ('Informe o primeiro número: '))
-        if (isNaN(n1)) //O resultado da conversão foi NaN?
-            alert ('Apenas números, tente novamente!')
+        
         let n2 = parseFloat ( prompt ('Informe o segundo número: '))
-         if (isNaN(n1)) //O resultado da conversão foi NaN?
-            alert ('Apenas números, tente novamente!')
+         
         let op = (prompt ('Informe o operador: (+ - * X x / :): '))
-       
-            
+        
+        if (isNaN(n1)||isNaN(n2)){ //O resultado da conversão foi NaN?
+            alert ('Apenas números, tente novamente!')
+        }    
+        else{
+            // switch case é uma estrutura de decisão que compara 
+            // uma única variável contra uma série de valores
+            switch(op){
+                case '+':
+                    document.write(`${n1} + ${n2} é igual a ${n1 + n2}`)
+                    break
+                case '-':
+                    document.write(`${n1} - ${n2} é igual a ${n1 - n2}`)
+                    break
+                case '*': //case vazio
+                case 'X': //case vazio
+                case 'x': 
+                    document.write(`${n1} * ${n2} é igual a ${n1 * n2}`)
+                    break
+                case '/': //case vazio
+                case ':': 
+                    document.write(`${n1} / ${n2} é igual a ${n1 / n2}`)
+                    break
+                default: //Else do Switch
+                    alert('Apenas operadores, tente novamente')
+                }
+            }
+        
+        
+        
+        /*
         if (op === '+' ){
              document.write(`${n1} + ${n2} é igual a ${n1+n2}`)
         }
@@ -47,6 +74,7 @@
         else {
             alert ('Apenas operadores (+ - * X x / :), tente novamente!')
         }
+        */
 
 
         

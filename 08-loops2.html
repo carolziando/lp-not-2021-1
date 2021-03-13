@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página Modelo</title>
+    <script>
+        //Ativa verificações adicionais de variáveis
+        // Modo "chato" do JavaScript
+        'use strict'
+
+        // 2) loop = Do ... while (geralmente usado para entrada de usuário)
+
+        
+
+        let soma = 0, num 
+        
+        do {
+
+            // Number tem o mesmo efeito que parsefloat
+            num = Number(prompt('Informe um número para somar ou 0 para terminar: '))
+           
+            if(! isNaN(num)){// Se for um número válido
+            soma += num //Equivale a:soma = soma+num
+            }
+            /*
+            if(! isNaN(num)){// Se for um número válido
+            soma /= num //Equivale a:soma = soma+num
+            }
+            */
+
+        }while(num !== 0)
+
+            
+        
+        alert (`A soma dos números informados é ${soma}.`)
+
+        // Características do loop while
+        // 1) Quantidade de execuções : indeterminada (pelo menos 1)
+        // 2) Garantia de execução : 1 vezes (não tem garantia)
+        // 3) Local de teste : no final
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -26,6 +26,42 @@
             de atendimento ao usuário da AUTOBURACON S/A.
 
         */
+       let extensao
+
+       do{
+           extensao = parseInt(prompt('Informe a extensão da rodovia (>200):'))
+       } while (isNaN(extensao)|| extensao <=200)
+
+       /*
+       let km = 1
+       while (km <=extensao){
+           if(km % 31 === 0){ //Múltiplo
+               document.write(`No Km ${km} há um pedágio.<br>`)
+           }
+           if (km % 23 === 0){
+               document.write(`No Km ${km} há um pedágio.<br>`)
+           }
+        // Incremento do km
+        km++       
+        }
+        */
+
+        for (let km = 1; km <= extensao; km++){
+            if(km % 31 ===0)
+            document.write(`No km ${km} há um pedágio.<br>`)
+                               
+        }
+            if(km % 23 ===0){
+            document.write(`No km ${km} há um pedágio.<br>`)
+                               
+        }
+
+        
+
+       
+
+
+
 
     </script>
 </head>

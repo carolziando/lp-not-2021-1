@@ -32,10 +32,22 @@
         do{
             num2 = parseInt (prompt('Digite o número final: (obs: apenas números inteiros e o número final deve ser diferente do número inicial) ')) 
         } while(isNaN(num2) || num1 === num2)
-         
         
+        let maior
+        let menor
+
+        if (num1>num2){
+            menor=num2
+            maior=num1
+        }
+         else{
+             menor=num1
+             maior=num2
+         }
+
+
         for (let i = num1; i <= num2; i++) {
-            i= [num1,num2]
+            soma+= i
             document.write(i+ '<br>')
         }
 

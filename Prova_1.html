@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Conveniências/ Emb. e Desemb. (São Paulo/ Franca)</title>
+    <script>
+        
+        'use strict'
+
+        /*
+            Declare uma função que não recebe argumento. Dentro dela, usando um loop for, imprima com  document.write() 
+            a lista dos quilômetros em que havará estações de embarque edesembarque, no sentido Franca – São Paulo, 
+            lembrando que o km 1 fica em São Paulo e okm 400, em Franca. Essa função não deverá ter valor de retorno.
+        */
+        for(let km = 400; km >= 1; km--) {
+            if(km % 50 == 0) {
+               document.write(`Estação de embarque e desembarque no quilômetro ${km}.<br>`)
+            }
+                       
+        }
+         
+        /*
+            Obtenha do usuário um número de quilômetro. Valide a entrada do usuário, 
+            repetindo a pergunta até que ele informe um número válido e que esteja 
+            entre 1 e 400 (inclusive).
+        */
+        let quilometro
+        do {
+            quilometro = parseInt(prompt('Informe um quilômetro entre 1 e 400:'))
+        } while(isNaN(quilometro) || quilometro < 1 || quilometro > 400)
+
+        /*
+            Utilizando a estrutura  switch, verifique se o quilômetro informado pelo 
+            usuário possuialguma das comodidades disponíveis ao longo da linha e, se 
+            for o caso, exiba-a  usandoalert(). Se não houver nada no quilômetro, 
+            exiba'Nada aqui.'.
+        */
+        let alerta
+        switch(quilometro) {
+            case 98:
+            case 190:
+            case 283:
+            case 379:
+                alerta = 'Conveniência Rede Mil Grau'
+                break
+
+            case 155:
+            case 355:
+                alerta = 'Polícia Ferroviária'
+                break
+
+            case 137: 
+                alerta = 'Aeroporto Interplanetário de Virapratos'
+                break
+
+            case 204: 
+                alerta = 'Hotel Cacique Internacional 6 estrelas'
+                break
+
+            case 311: 
+                alerta = 'Boleli shopping center'
+                break
+
+            case 356: 
+                alerta = 'AcquaParque Unidade III'
+                break
+
+            default:
+                alerta = 'NADA AQUI.'
+        }
+        alert(alerta)
+        
+        </script>
+</head>
+<body>
+
+</body>
+</html>

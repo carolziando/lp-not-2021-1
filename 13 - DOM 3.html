@@ -127,14 +127,16 @@
             elSobrenome.focus()
             return false
         }
-        if(elFormaTratamento.selectIndex === 0){//selectIndex === opções
+        if(elFormaTratamento.selectedIndex === 0){//selectIndex === opções
             alert ('Selecione uma opção de forma de tratamento.')
             elFormaTratamento.focus()
             return false
         }
 
-        let horaDia = parseInt(elHoraDia)
-        if (isNaN(horaDia) || horaDia < 0 || horaDia > 23){
+
+
+        let horaDia = parseInt()
+            if (isNaN(horaDia) || horaDia < 0 || horaDia > 23){
             alert ('Informe uma hora válida entre 0 e 23.')
             elHoraDia.focus()
             return false
@@ -200,7 +202,7 @@
                     }
                     break
 
-                case 6:
+                default:
                     if(elFeminino.checked){
                     mensagem+= 'Cremosíssima '
                     }
